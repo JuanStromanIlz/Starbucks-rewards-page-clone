@@ -8,23 +8,23 @@ import FooterContainer from '../styled-components/FooterContainer';
 import AcordionTab from './AcordionTab';
 
 const about = {
-  title: 'About us',
+  title: 'About Us',
   items: [
-    {link: 'https://www.starbucks.com/about-us/company-information', text: 'Our Hereditage'},
+    {link: 'https://www.starbucks.com/about-us/company-information', text: 'Our Heritage'},
     {link: 'https://www.starbucks.com/coffee', text: 'Our Coffee'}, 
     {link: 'https://stories.starbucks.com/', text: 'Stories and News'}, 
     {link: 'https://investor.starbucks.com/', text: 'Investor Relations'},
-    {link: 'https://www.starbucks.com/responsibility/global-report/policies', text: 'Policies and Standars'},
+    {link: 'https://www.starbucks.com/responsibility/global-report/policies', text: 'Policies and Standards'},
     {link: 'https://customerservice.starbucks.com/', text: 'Costumer Services'}
   ]
 };
 const careers = {
-  title: 'Carees',
+  title: 'Careers',
   items: [
     {link: 'https://www.starbucks.com/careers/working-at-starbucks/culture-and-values', text: 'Culture and Values'}, 
     {link: 'https://stories.starbucks.com/stories/equity-inclusion/', text: 'Inclusion, Diversity, and Equity'}, 
     {link: 'https://www.starbucks.com/careers/working-at-starbucks/education', text: 'College Achievement Plan'},
-    {link: 'https://www.starbucks.com/careers/', text: 'U.S Carees'},
+    {link: 'https://www.starbucks.com/careers/', text: 'U.S Careers'},
     {link: 'https://www.starbucks.com/careers/international-careers', text: 'International Careers'}
   ]
 };
@@ -95,10 +95,10 @@ const Footer = () => {
         </ul>
         <ul className='footer-list'>
           <li><a href='https://www.starbucks.com/about-us/company-information/online-policies/privacy-policy'>Privacy Policy</a></li>
-          <li><a href='https://www.starbucks.com/about-us/company-information/online-policies/terms-of-use'>Terms of Use</a></li>
-          <li><a href='https://globalassets.starbucks.com/assets/A2A072E3411C4A6ABAEB8D6BCF286F43.pdf'>CA Supply Chain Act</a></li>
-          <li><a href='https://ideas.starbucks.com/'>Submit Your Idea</a></li>
-          <li><a href='/'>Cookie Preferences</a></li>
+          <li><span>|</span><a href='https://www.starbucks.com/about-us/company-information/online-policies/terms-of-use'>Terms of Use</a></li>
+          <li><span>|</span><a href='https://globalassets.starbucks.com/assets/A2A072E3411C4A6ABAEB8D6BCF286F43.pdf'>CA Supply Chain Act</a></li>
+          <li><span>|</span><a href='https://ideas.starbucks.com/'>Submit Your Idea</a></li>
+          <li><span>|</span><a href='/'>Cookie Preferences</a></li>
         </ul>
         <p className='rights'>© 2021 Starbucks Coffee Company. All rights reserved.</p>
       </div>

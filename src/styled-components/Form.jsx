@@ -1,60 +1,97 @@
 import styled from 'styled-components';
 
 const Form = styled.form`
+  width: 100%;
   padding-bottom: 3.2rem;
-  .wrapper {
+  .footer-wrapper {
     display: flex;
     flex-direction: column;
   }
   .input-wrapper {
     display: flex;
     position: relative;
-    border-bottom: 1px solid ${props => props.touchedField ? props.theme.colors.lightMain : 'rgba(0,0,0,.2)'};
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+  .input-wrapper--active {
+    border-color: ${props => props.theme.colors.lightMain};
+  }
+  .input-wrapper--error {
+    border-color: ${props => props.theme.colors.error};
   }
   .error-wrapper {
-
+    height: 0;
+    overflow: hidden;
+    transition: height .3s cubic-bezier(.25,.46,.45,.94);
+  }
+  .error-wrapper--active {
+    height: 28px;
+  }
+  .error-wrapper > div > span {
+    display: block;
+    padding-top: .8rem;
+  }
+  #error-message {
+    display: block;
+    font-size: 1.3rem;
+    position: relative;
+    transition: color .2s ease-out;
+  }
+  #error-message > span {
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: middle;
   }
   .warning-icon {
+    display: inline-block;
     margin-bottom: .4rem;
     align-self: flex-end;
     color: ${props => props.theme.colors.error};
   }
-  ${'' /* .error-field {
-    padding-top: .8rem;
-    display: flex;
-  }
-  .is-error {
-    height: 28px;
-  }
-  #error-field div:first-child {
-    position: relative;
-    height: 0px;
-    overflow: hidden;
-    transition: height .3s cubic-bezier(.25,.46,.45,.94);
-  } */}
-  ${'' /* .error-icon {
+  .error-icon {
     position: absolute;
     top: 0;
     left: -4px;
     animation: field-status-icon-fade-in .2s ease-out forwards;
     color: ${props => props.theme.colors.error};
   }
-  #error-message {
-    display: inline-block;
-    padding-left: 20px;
-    vertical-align: middle;
-  } */}
+  @keyframes float-label-appear {
+    0% {
+      font-size: 1.4rem;
+      opacity: 1;
+      top: 30px;
+    }
+
+    50% {
+      font-size: 1.3rem;
+      opacity: 0;
+      top: 30px;
+    }
+
+    51% {
+      font-size: 1.3rem;
+      opacity: 0;
+      top: 10px;
+    }
+
+    100% {
+      font-size: 1.3rem;
+      opacity: 1;
+      top: 10px;
+    }
+  }
+.label--isActive {
+  animation: 0.3s float-label-appear ease-in-out forwards;
+}
   label {
-    position: absolute;
     cursor: text;
     font-size: 1.4rem;
+    position: absolute;
     top: 30px;
     left: 0;
+    -webkit-user-select: none;
     user-select: none;
+    color: rgba(0,0,0,.56);
     z-index: 2;
-    :focus {
-      top: 0;
-    }
   }
   input {
     appearance: none;
