@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import theme from './theme';
 import {ThemeProvider} from 'styled-components';
 import BannerComponent from './components/Banner';
@@ -19,7 +19,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <StyledApp>
-        <Navbar />
+        <Header />
         <main>
           <BannerComponent />
           <HeroComponent />

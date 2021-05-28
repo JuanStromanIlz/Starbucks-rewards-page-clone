@@ -8,6 +8,8 @@ const TableContent = styled.div`
   }
   .title {
     text-align: center;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
   .title h2 {
     font-size: 2.4rem;
@@ -51,9 +53,13 @@ const TableContent = styled.div`
   }
   .table-content {
     position: relative;
+    margin: 0 auto;
     padding-bottom: 4.8rem;
     box-shadow: inset 0 7px 9px -7px rgb(0 0 0 / 14%);
     background: ${props => props.theme.colors.secondary};
+  }
+  .table-view > div {
+    flex-grow: 1;
   }
   .active {
     opacity: 1;
@@ -106,6 +112,47 @@ const TableContent = styled.div`
     font-size: 1.9rem;
     font-weight: 600;
     padding-bottom: 1.6rem;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 128px;
+    .wrapper {
+      margin-bottom: 4.8rem;
+    }
+    .title h2 {
+      font-size: 2.8rem;
+      padding-bottom: 4.8rem;
+    }
+    .table-options {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .table-options button h3 {
+      font-size: 2.4rem;
+    }
+    .table-content {
+      padding-bottom: 0;
+    }
+    .table-view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
+    .table-view > div {
+      max-width: 375px;
+    }
+    .image-field {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-right: 4.8rem;
+    }
+    .text-field {
+      text-align: left;
+    }
+    .text-field h4 {
+      font-size: 2.4rem;
+    }
   }
 `;
 

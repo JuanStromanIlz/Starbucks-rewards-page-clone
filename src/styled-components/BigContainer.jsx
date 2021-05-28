@@ -5,7 +5,6 @@ const BigContainer = styled.div`
   margin-bottom: 72px;
   .wrapper {
     margin: 0 auto;
-    max-width: 1440px;
     padding: 4.8rem 1.6rem;
   }
   .title {
@@ -94,6 +93,10 @@ const BigContainer = styled.div`
     }
   }
   @media (min-width: 1024px) {
+    .wrapper {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
     .grid-title {
       width: 16.66667%;
       padding-bottom: 0;
@@ -105,7 +108,14 @@ const BigContainer = styled.div`
       padding: 0 2.4rem;
     }
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1520px) {
+    .wrapper {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
     .grid-item {
       width: 33.33333%;
     }
