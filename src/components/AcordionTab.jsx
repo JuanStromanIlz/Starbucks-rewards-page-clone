@@ -6,15 +6,15 @@ const AcordionTab = ({title, items}) => {
   const button = useRef(null);
   const content = useRef(null);
   function openTab() {
-    button.current.classList.toggle('open-button');
-    content.current.classList.toggle('open');
+    button.current.classList.toggle('icon--active');
+    content.current.classList.toggle('content--active');
   }
   return (
     <Acordion contentHeight={`${45 * items.length}px`}>
       <div className='small-view'>
         <div className='header'>
           <h3>{title}</h3>
-          <button ref={button} onClick={() => openTab()}><DropDown/></button>
+          <button ref={button} onClick={() => openTab()}><DropDown className='icon'/></button>
         </div>
         <div ref={content} className='content'>
           <div>

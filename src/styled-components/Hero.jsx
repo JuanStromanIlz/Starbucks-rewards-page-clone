@@ -87,6 +87,12 @@ const Hero = styled.div`
       font-size: 1.9rem;
     }
   }
+  @media (min-width: 1024px) {
+    .text-block {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
   @media (min-width: 1520px) {
     .text-block {
       padding-left: 0;

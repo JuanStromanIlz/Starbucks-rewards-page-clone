@@ -4,10 +4,6 @@ function DropDown(props) {
       viewBox="0 0 24 24"
       className="prefix__valign-middle prefix__absoluteCenter"
       aria-hidden="true"
-      style={{
-        width: 32,
-        height: 32,
-      }}
       overflow="visible"
       fill="currentcolor"
       {...props}

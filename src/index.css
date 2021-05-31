@@ -50,6 +50,11 @@ body {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1024px) {
+  main {
+    padding-top: 99px;
+  }
+}
 *,
 :after,
 :before {
@@ -60,4 +65,13 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 button, input {
   font: inherit;
+}
+main {
+  position: relative;
+  z-index: 1;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
