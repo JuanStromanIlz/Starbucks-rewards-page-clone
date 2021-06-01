@@ -17,36 +17,37 @@ const Banner = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  p {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-  }
-  a {
-    display: inline-block;
-    color: #fff;
-    background: none;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    padding: 7px 16px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
+    p {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    a {
+      display: inline-block;
+      color: #fff;
+      background: none;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      padding: 7px 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
   }
   @media (min-width: 768px) {
     .banner-wrapper {
       padding-left: 99px;
       padding-right: 2.4rem;
-    }
-    p {
-      font-size: 1.4rem;
-    }
-    a {
-      display: none;
+      p {
+        font-size: 1.4rem;
+      }
+      a {
+        display: none;
+      }
     }
   }
   @media (min-width: 1024px) {

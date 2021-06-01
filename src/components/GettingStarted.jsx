@@ -1,5 +1,4 @@
 import Container from '../styled-components/Container';
-import A from '../styled-components/A';
 
 const GettingStarted = () => (
   <Container>
@@ -15,7 +14,7 @@ const GettingStarted = () => (
           </div>
           <div className='text-container'>
             <h2>Download the Starbucks® app</h2>
-            <p><A href='/' color={props => props.theme.colors.lightMain}>Join in the app</A> to get access to the full range of Starbucks® Rewards benefits. You can also <A href='/' color={props => props.theme.colors.lightMain}>join online.</A></p>
+            <p>To get started, <a href='/' >join now.</a> You can also <a href='/'>join in the app</a> to get access to the full range of Starbucks® Rewards benefits.</p>
           </div>
         </div>
         <div className='list-item'>
@@ -24,7 +23,7 @@ const GettingStarted = () => (
           </div>
           <div className='text-container'>
             <h2>Order and pay how you’d like</h2>
-            <p>Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways. <A href='/' color={props => props.theme.colors.lightMain}>Learn how</A></p>
+            <p>Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways. <a href='/'>Learn how</a></p>
           </div>
         </div>
         <div className='list-item'>

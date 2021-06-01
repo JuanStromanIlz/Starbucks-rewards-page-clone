@@ -13,15 +13,15 @@ function MenuIcon(props) {
       {...props}
     >
       <path
-        className="prefix__sb-hamburgerButton-middleLine-CLOSED prefix__sb-hamburgerButton-animation"
+        className="hamburger-button-animation"
         d="M21 12.9H3c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h18c.5 0 .9.4.9.9s-.4.9-.9.9z"
       />
       <path
-        className="prefix__sb-hamburgerButton-topLine-CLOSED prefix__sb-hamburgerButton-animation prefix__sb-hamburgerButton-animation-outer-lines"
+        className="hamburger-button-animation hamburger-button-animation-outer-lines"
         d="M21 6.9H3c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h18c.5 0 .9.4.9.9s-.4.9-.9.9z"
       />
       <path
-        className="prefix__sb-hamburgerButton-bottomLine-CLOSED prefix__sb-hamburgerButton-animation prefix__sb-hamburgerButton-animation-outer-lines"
+        className="hamburger-button-animation hamburger-button-animation-outer-lines"
         d="M21 18.9H3c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h18c.5 0 .9.4.9.9s-.4.9-.9.9z"
       />
       <circle

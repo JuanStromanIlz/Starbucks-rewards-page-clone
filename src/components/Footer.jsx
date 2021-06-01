@@ -15,7 +15,7 @@ const about = {
     {link: 'https://stories.starbucks.com/', text: 'Stories and News'}, 
     {link: 'https://investor.starbucks.com/', text: 'Investor Relations'},
     {link: 'https://www.starbucks.com/responsibility/global-report/policies', text: 'Policies and Standards'},
-    {link: 'https://customerservice.starbucks.com/', text: 'Costumer Services'}
+    {link: 'https://customerservice.starbucks.com/', text: 'Customer Service'}
   ]
 };
 const careers = {
@@ -24,7 +24,7 @@ const careers = {
     {link: 'https://www.starbucks.com/careers/working-at-starbucks/culture-and-values', text: 'Culture and Values'}, 
     {link: 'https://stories.starbucks.com/stories/equity-inclusion/', text: 'Inclusion, Diversity, and Equity'}, 
     {link: 'https://www.starbucks.com/careers/working-at-starbucks/education', text: 'College Achievement Plan'},
-    {link: 'https://www.starbucks.com/careers/', text: 'U.S Careers'},
+    {link: 'https://www.starbucks.com/careers/', text: 'U.S. Careers'},
     {link: 'https://www.starbucks.com/careers/international-careers', text: 'International Careers'}
   ]
 };

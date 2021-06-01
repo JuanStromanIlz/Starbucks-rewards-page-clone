@@ -1,4 +1,3 @@
-import A from '../styled-components/A';
 import Hero from '../styled-components/Hero';
 
 const HeroComponent = () => {
@@ -18,9 +17,9 @@ const HeroComponent = () => {
               </p>
             </div>
             <div className='join'>
-              <A href='/' typeButton color='#fff' back={props => props.theme.colors.lightMain}>Join in the app</A>
+              <a href='/' className='type-button'>Join in the app</a>
               <div>
-                <A href='/' color={props => props.theme.colors.black}>Or join online</A>
+                <a href='/' className='hero-link'>Or join online</a>
               </div>
             </div>
           </div>
@@ -41,9 +40,9 @@ const HeroComponent = () => {
                 </p>
               </div>
               <div className='join'>
-                <A href='/' typeButton color='#fff' back={props => props.theme.colors.lightMain}>Join now</A>
+                <a href='/' className='type-button'>Join now</a>
                 <div>
-                  <span>Or <A href='/' color={props => props.theme.colors.black}>join in the app</A> for the best experience</span>
+                  <span>Or <a href='/' className='hero-link'>join in the app</a> for the best experience</span>
                 </div>
               </div>
             </div>

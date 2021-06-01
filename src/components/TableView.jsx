@@ -43,7 +43,7 @@ const TableView = () => {
             </button>
           </div>
           <div className='table-content'>
-            <div className={`table-view ${view === 0 ? 'active' : 'inactive'}`}>
+            <div className={`view ${view === 0 ? 'view--active' : 'view--inactive'}`}>
               <div className='image-field'>
                 <div>
                   <div className='size-of-box'></div>
@@ -57,7 +57,7 @@ const TableView = () => {
                 <p>Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup.</p>
               </div>
             </div>
-            <div className={`table-view ${view === 1 ? 'active' : 'inactive'}`}>
+            <div className={`view ${view === 1 ? 'view--active' : 'view--inactive'}`}>
               <div className='image-field'>
                 <div>
                   <div className='size-of-box'></div>
@@ -71,7 +71,7 @@ const TableView = () => {
                 <p>Pair coffee cake or an almond croissant with your fresh cup of hot brew.</p>
               </div>
             </div>
-            <div className={`table-view ${view === 2 ? 'active' : 'inactive'}`}>
+            <div className={`view ${view === 2 ? 'view--active' : 'view--inactive'}`}>
               <div className='image-field'>
                 <div>
                   <div className='size-of-box'></div>
@@ -85,7 +85,7 @@ const TableView = () => {
                 <p>Have a really good morning with a breakfast sandwich, oatmeal or your favorite drink.</p>
               </div>
             </div>
-            <div className={`table-view ${view === 3 ? 'active' : 'inactive'}`}>
+            <div className={`view ${view === 3 ? 'view--active' : 'view--inactive'}`}>
               <div className='image-field'>
                 <div>
                   <div className='size-of-box'></div>
@@ -99,7 +99,7 @@ const TableView = () => {
                 <p>Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese Protein Box.</p>
               </div>
             </div>
-            <div className={`table-view ${view === 4 ? 'active' : 'inactive'}`}>
+            <div className={`view ${view === 4 ? 'view--active' : 'view--inactive'}`}>
               <div className='image-field'>
                 <div>
                   <div className='size-of-box'></div>

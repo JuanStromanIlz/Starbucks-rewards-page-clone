@@ -11,6 +11,16 @@ const Acordion = styled.div`
     margin-bottom: 2.4rem;
     font-weight: 400;
   }
+  a {
+    display: block;
+    padding: .8rem 0;
+    margin-bottom: .8rem;
+    color: rgba(0,0,0,.56);
+    text-decoration: none;
+    :hover {
+        color: rgba(0,0,0,.87);
+    }
+  }
   .header {
     cursor: pointer;
     padding: .8rem 0;
@@ -19,7 +29,7 @@ const Acordion = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .title {
+    h3 {
       font-size: 1.6rem;
       font-weight: 400;
     }
@@ -42,10 +52,6 @@ const Acordion = styled.div`
         vertical-align: middle;
       }
     }
-    h3 {
-      font-size: 1.6rem;
-      font-weight: 400;
-    }
   }
   .content {
     position: relative;
@@ -58,13 +64,6 @@ const Acordion = styled.div`
       right: 0;
       bottom: 0;
       left: 0;
-      ul a {
-        display: block;
-        padding: .8rem 0;
-        margin-bottom: .8rem;
-        color: rgba(0,0,0,.56);
-        text-decoration: none;
-      }
     }
   }
   /* OPEN TAB ANIMATION */

@@ -1,5 +1,4 @@
 import Link from '../assets/icons/Link';
-import A from '../styled-components/A';
 import BigContainer from '../styled-components/BigContainer';
 
 const Points = () => (
@@ -75,7 +74,7 @@ const Points = () => (
             </div>
             <div className='item-text'>
               <h3>Earn Stars even faster</h3>
-              <p>Earn Stars on all purchases you make with our <A href='/'>credit card</A><Link className='icon'/> in and outside of Starbucks. Earn 1 Star per $1 when you digitally preload your Starbucks Card with your Starbucks® Rewards Visa® Card, and earn 2 Stars per $1 when you pay with that preloaded Starbucks Card.</p>
+              <p>Earn Stars on all purchases you make with our <a href='/'>credit card</a><Link className='icon'/> in and outside of Starbucks. Earn 1 Star per $1 when you digitally preload your Starbucks Card with your Starbucks® Rewards Visa® Card, and earn 2 Stars per $1 when you pay with that preloaded Starbucks Card.</p>
             </div>
           </div>
         </div>

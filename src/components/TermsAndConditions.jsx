@@ -1,5 +1,4 @@
 import Link from '../assets/icons/Link';
-import A from '../styled-components/A';
 import TermsContainer from '../styled-components/TermsContainer';
 
 const TermsAndConditions = () => (
@@ -14,9 +13,9 @@ const TermsAndConditions = () => (
       </div>
       <div className='text-container'>
         <h3 className='heading-text'>TERMS OF USE</h3>
-        <p>For full program details visit <A href='/'>starbucks.com/rewards/terms</A><Link className='icon'/></p>
+        <p>For full program details visit <a href='/'>starbucks.com/rewards/terms</a><Link className='icon'/></p>
         <p>* Earn 1 Star per $1 when digitally loading your Starbucks Card with your Starbucks® Rewards Visa® Card: See your Card Rewards Program Agreement for more details.</p>
-        <p>Starbucks® Rewards benefits are available at participating Starbucks stores. Not all stores have the ability to honor Rewards at this time. Visit the <A href='/'>Starbucks Store Locator</A><Link className='icon'/> and search for locations honoring “Redeem Rewards”.</p>
+        <p>Starbucks® Rewards benefits are available at participating Starbucks stores. Not all stores have the ability to honor Rewards at this time. Visit the <a href='/'>Starbucks Store Locator</a><Link className='icon'/> and search for locations honoring “Redeem Rewards”.</p>
         <p>Deposit and credit card products provided by JPMorgan Chase Bank, N.A. Member FDIC</p>
       </div>
       <div className='text-container'>
