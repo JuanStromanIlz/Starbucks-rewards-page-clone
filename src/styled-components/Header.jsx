@@ -162,6 +162,22 @@ const Header = styled.header`
     .hamburger-hidden {
       display: none!important;
     }
+    .sub-menu {
+      padding-top: 0!important;
+      button {
+        box-shadow: inset 0 4px 5px -3px rgb(0 0 0 / 20%);
+        background: #f7f7f7!important;
+        justify-content: center!important;
+        padding: 1.6rem 3.2rem;
+        .icon {
+          position: absolute;
+          left: 24px;
+          top: 16px;
+          vertical-align: middle!important;
+          transform: rotate(90deg)!important;
+        }
+      }
+    }
     .hamburger-nav {
       position: fixed;
       left: 20vw;

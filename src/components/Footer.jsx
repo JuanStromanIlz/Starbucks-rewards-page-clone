@@ -8,6 +8,7 @@ import FooterContainer from '../styled-components/FooterContainer';
 import AcordionTab from './AcordionTab';
 
 const about = {
+  id: '0',
   title: 'About Us',
   items: [
     {link: 'https://www.starbucks.com/about-us/company-information', text: 'Our Heritage'},
@@ -19,6 +20,7 @@ const about = {
   ]
 };
 const careers = {
+  id: '1',
   title: 'Careers',
   items: [
     {link: 'https://www.starbucks.com/careers/working-at-starbucks/culture-and-values', text: 'Culture and Values'}, 
@@ -29,6 +31,7 @@ const careers = {
   ]
 };
 const socialImpact = {
+  id: '2',
   title: 'Social Impact',
   items: [
     {link: 'https://www.starbucks.com/responsibility/sourcing', text: 'Ethical Sourcing'}, 
@@ -39,6 +42,7 @@ const socialImpact = {
   ]
 };
 const business = {
+  id: '3',
   title: 'For Bussines Partners',
   items: [
     {link: 'https://www.starbucks.com/business/landlord-faq', text: 'Landlord Support Center'}, 
@@ -48,6 +52,7 @@ const business = {
   ]
 };
 const orderAndPickup = {
+  id: '4',
   title: 'Order and Pickup',
   items: [
     {link: 'https://www.starbucks.com/rewards/mobile-apps', text: 'Order on the App'}, 

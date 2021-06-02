@@ -6,11 +6,15 @@ import MenuIcon from '../assets/icons/MenuIcon';
 import DropDown from '../assets/icons/DropDown';
 
 const Navbar = () => {
+  // Control of view selected for box-shadow animation
   const [view, setView] = useState(1);
+  // Control of menu and subMenu open
   const [isOpen, setMenu] = useState(false);
+  const [isOpenSub, setSubMenu] = useState(false);
   const mask = useRef(null);
   const menu1 = useRef(null);
   const menu2 = useRef(null);
+  // Animation order for menu-icon
   const openAnima = ['hamburger-button-middleLine-OPENING', 'hamburger-button-topLine-OPENING', 'hamburger-button-bottomLine-OPENING'];
   const openFixed = ['hamburger-button-middleLine-OPEN', 'hamburger-button-topLine-OPEN', 'hamburger-button-bottomLine-OPEN'];
   const closeAnima = ['hamburger-button-middleLine-CLOSING', 'hamburger-button-topLine-CLOSING', 'hamburger-button-bottomLine-CLOSING'];
@@ -22,7 +26,7 @@ const Navbar = () => {
   function selectView(number) {
     setView(number);
   }
-  /* Menu icon animation */
+  // Menu icon animation
   function iconChange() {
     const icon = document.getElementsByClassName('menu-icon')[0].getElementsByTagName("path");
     if (!isOpen) {
@@ -72,7 +76,7 @@ const Navbar = () => {
         setMenu(!isOpen);
       }, 300);
     }else{
-      // Remove body fix
+      // Remove body fix and close for both menus
       bodyPage.style.removeProperty('overflow');
       bodyPage.style.removeProperty('touch-action');
       bodyPage.style.removeProperty('top');
@@ -80,21 +84,47 @@ const Navbar = () => {
       bodyPage.style.removeProperty('width');
       mask.current.classList.remove('hamburger-mask--enter');
       menu1.current.classList.add('hamburger-nav--closing');
+      menu2.current.classList.add('hamburger-nav--closing');
       iconChange();
       setTimeout(() => {
         menu1.current.classList.remove('hamburger-nav--closing');
+        menu2.current.classList.remove('hamburger-nav--closing');
         mask.current.classList.add('hamburger-hidden');
         menu1.current.classList.add('hamburger-hidden');
+        menu2.current.classList.add('hamburger-hidden');
         setMenu(!isOpen);
+        setSubMenu(false);
+      }, 300);
+    }
+  }
+  function openSubMenu() {
+    if (!isOpenSub) {
+      menu2.current.classList.remove('hamburger-hidden');
+      menu2.current.classList.add('hamburger-nav--opening');
+      setTimeout(() => {
+        menu2.current.classList.remove('hamburger-nav--opening');
+        setSubMenu(!isOpenSub);
+      }, 300);
+    }else{
+      menu2.current.classList.add('hamburger-nav--closing');
+      setTimeout(() => {
+        menu2.current.classList.remove('hamburger-nav--closing');
+        menu2.current.classList.add('hamburger-hidden');
+        setSubMenu(!isOpenSub);
       }, 300);
     }
   }
   useEffect(() => {
     const resizeListener = () => {
-      // change width from the state object
-      if (getWidth() > 780) {
+      if (getWidth() > 768) {
         const bodyPage = document.getElementsByTagName('body')[0];
-        // Remove body fix
+        // Reset icon style
+        const icon = document.getElementsByClassName('menu-icon')[0].getElementsByTagName("path");
+        for (let i = 0; i < icon.length; i++) {
+          const element = icon[i];
+          element.classList.remove(openFixed[i]);
+        }
+        // Remove body fix and hamburger nav in viewports up to 780px
         bodyPage.style.removeProperty('overflow');
         bodyPage.style.removeProperty('touch-action');
         bodyPage.style.removeProperty('top');
@@ -102,19 +132,20 @@ const Navbar = () => {
         bodyPage.style.removeProperty('width');
         mask.current.classList.remove('hamburger-mask--enter');
         menu1.current.classList.add('hamburger-nav--closing');
+        menu2.current.classList.add('hamburger-nav--closing');
         setTimeout(() => {
           menu1.current.classList.remove('hamburger-nav--closing');
+          menu2.current.classList.remove('hamburger-nav--closing');
           mask.current.classList.add('hamburger-hidden');
           menu1.current.classList.add('hamburger-hidden');
+          menu2.current.classList.add('hamburger-hidden');
           setMenu(false);
+          setSubMenu(false);
         }, 300);
       }
     };
-    // set resize listener
     window.addEventListener('resize', resizeListener);
-    // clean up function
     return () => {
-      // remove resize listener
       window.removeEventListener('resize', resizeListener);
     }
   }, []);
@@ -164,7 +195,7 @@ const Navbar = () => {
             <div>
               <ul>
                 <li>
-                  <button>
+                  <button onClick={() => openSubMenu()}>
                     Menu
                     <DropDown className='icon'/>
                   </button>
@@ -180,11 +211,11 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div ref={menu2} className='hamburger-nav hamburger-height hamburger-hidden'>
+          <div ref={menu2} className='hamburger-nav hamburger-height hamburger-hidden sub-menu'>
             <ul>
               <li>
-                <button onClick={() => openMenu()}>
-                  <span>Menu</span>
+                <button onClick={() => openSubMenu()}>
+                  Menu
                   <DropDown className='icon'/>
                 </button>
               </li>

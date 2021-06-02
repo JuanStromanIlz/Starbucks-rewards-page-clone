@@ -20,7 +20,7 @@ const AcordionTab = ({title, items}) => {
           <div>
             <ul>
               {items.map(item => (
-                <li><a href={item.link}>{item.text}</a></li>
+                <li key={item.id}><a href={item.link}>{item.text}</a></li>
               ))}
             </ul>
           </div>
