@@ -1,7 +1,7 @@
 # ☕ Starbucks Rewards
 Clon de la pagina oficial de Starbucks Rewards realizada con **react.js** y **styled-components**.\
 \
-[![Ver online](https://img.shields.io/badge/-Ver%20Online-red?style=for-the-badge&logo=googlechrome&logoColor=white)](http://cck-visuales-cartelera.vercel.app)
+[![Ver online](https://img.shields.io/badge/-Ver%20Online-red?style=for-the-badge&logo=googlechrome&logoColor=white)](https://starbucks-rewards-clone.vercel.app)
 ## 📖 En este proyecto:
 * ✨ react state.
 * 🔔 react refs.
